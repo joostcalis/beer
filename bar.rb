@@ -1,3 +1,8 @@
+require 'personclass.rb'
+require 'bartenderclass.rb'
+require 'beerclass.rb'
+require 'customerclass.rb'
+
 the_bartender = Bartender.new("Joe")
 captain_jack = Customer.new("Cpt. Jack")
 ​
