@@ -1,17 +1,15 @@
-class Bartender < Person
-  def initialize(name)
-    super # Call the initialize(name) method in the super class (Person)
-    @customers = []
-  end
+the_bartender = Bartender.new("Joe")
+captain_jack = Customer.new("Cpt. Jack")
 ​
-  def greet(customer)
-    super
-    @customers << customer
-  end
-  def old_enough(age)
+the_bartender.greet(captain_jack)
+is_old_enough(captain_jack)
+the_bartender.serve(captain_jack)
 ​
-  def serve(customer)
-    say "There ya go.."
-    customer.take_beer(Beer.new)
-  end
+# Captain Jack can drink while he has beer
+while captain_jack.has_beer?
+  captain_jack.drink!
+  sleep 1
 end
+​
+captain_jack.drink!
+the_bartender.serve(captain_jack)

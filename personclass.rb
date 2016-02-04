@@ -1,8 +1,12 @@
 class Person
-  def initialize(name, mood)
+  def initialize(name, age)
     @name = name
     @age = age
   end
+
+  def old_enough
+    if @age >= 18
+    end
 ​
   def greet(other_person)
     say "Hi, how are ya?"
@@ -18,7 +22,7 @@ class Person
   end
 
   def what_is_your_age
-    say "age"
+    say @age
 ​
   def say(message)
     puts "#{@name}: #{message}!"

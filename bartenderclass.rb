@@ -1,5 +1,5 @@
 class Bartender < Person
-  def initialize(name)
+  def initialize(name, age)
     super # Call the initialize(name) method in the super class (Person)
     @customers = []
   end
@@ -8,7 +8,14 @@ class Bartender < Person
     super
     @customers << customer
   end
-  def old_enough(age)
+
+  def is_old_enough(customer)
+    if customer.old_enough == false
+      puts "you're not old enough"
+    end
+
+
+
 ​
   def serve(customer)
     say "There ya go.."
